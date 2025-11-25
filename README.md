@@ -25,4 +25,5 @@ boas práticas de arquitetura, organização de código, segurança, Docker e do
 - User (controller, service, repository)
 - Flyway com tabelas user e show
 - Classe de paginação (Util.class)
-- Classe base para chamadas externas (AbstractRequest<T>.class)
+
+- Classe modelo para chamadas externas (AbstractRequest<T>.class)
