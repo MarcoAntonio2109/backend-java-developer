@@ -31,6 +31,9 @@ public class AuthenticationService {
     @Value("${app.jwt.expiration-minutes}")
     long expMinutes;
 
+    @Autowride
+    private RestTemplate restTemplate;
+
     public AuthenticationService(AuthenticationManager authenticationManager, JwtEncoder jwtEncoder, UserRepository userRepository) {
         this.authenticationManager = authenticationManager;
         this.jwtEncoder = jwtEncoder;
@@ -64,5 +67,10 @@ public class AuthenticationService {
                 .getTokenValue();
 
         return new TokenResponse(token);
+    }
+
+    public String obtemSingleSearch (String nome){
+        var url = "https://api.tvmaze.com/singlesearch/shows?q=";
+        return restTemplate.getForObject(url.concat(nome), String.class);
     }
 }

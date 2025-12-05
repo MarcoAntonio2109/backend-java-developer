@@ -30,6 +30,8 @@ public class AbstractPostgresContainerIT {
         registry.add("app.jwt.issuer", () -> "cmanage-tests");
         registry.add("app.jwt.expiration-minutes", () -> "30");
 
+        registry.add("app.jwt.expiration-minutes", () -> "30");
+
         // Caso use Flyway/Liquibase e não queira rodar aqui:
         // registry.add("spring.flyway.enabled", () -> "false");
         // registry.add("spring.liquibase.enabled", () -> "false");

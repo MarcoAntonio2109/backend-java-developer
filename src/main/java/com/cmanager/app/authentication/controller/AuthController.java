@@ -38,4 +38,9 @@ public class AuthController {
         final var response = authenticationService.login(req.username(), req.password());
         return ResponseEntity.ok(response);
     }
+    @GetMapping("obtem-single-search")
+    public ResponseEntity<String> obtemSingleSearch(@PathVariable String nome) {
+        final var response = authenticationService.obtemSingleSearch(nome);
+        return ResponseEntity.ok(response);
+    }
 }
