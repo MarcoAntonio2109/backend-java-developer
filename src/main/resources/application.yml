@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT:9012}
+  port: ${SERVER_PORT:8091}
 spring:
   application:
     name: cmanager-service

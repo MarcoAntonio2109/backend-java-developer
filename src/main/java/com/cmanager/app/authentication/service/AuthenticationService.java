@@ -26,6 +26,7 @@ public class AuthenticationService {
     private final JwtEncoder jwtEncoder;
     private final UserRepository userRepository;
 
+
     @Value("${app.jwt.issuer}")
     String issuer;
     @Value("${app.jwt.expiration-minutes}")
@@ -38,6 +39,7 @@ public class AuthenticationService {
     }
 
     public TokenResponse login(String username, String password) {
+
         final Authentication auth = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(username, password)
         );

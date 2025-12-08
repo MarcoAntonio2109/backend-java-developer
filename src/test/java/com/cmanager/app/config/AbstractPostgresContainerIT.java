@@ -11,9 +11,9 @@ public class AbstractPostgresContainerIT {
 
     @Container
     protected static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>(DockerImageName.parse("postgres:16-alpine"))
-            .withDatabaseName("app")
-            .withUsername("app")
-            .withPassword("app");
+            .withDatabaseName("test")
+            .withUsername("test")
+            .withPassword("test");
 
     @BeforeAll
     static void startContainer() {
